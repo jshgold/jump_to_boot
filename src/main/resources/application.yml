@@ -1,0 +1,10 @@
+spring:
+  application:
+      name: sbb
+  output:
+    ansi:
+      enabled: always
+    application:
+      name: sbb
+    profiles:
+      active: dev
