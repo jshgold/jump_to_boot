@@ -1,10 +1,9 @@
 spring:
   application:
       name: sbb
+  profiles:
+    active: dev
   output:
     ansi:
       enabled: always
-    application:
-      name: sbb
-    profiles:
-      active: dev
+
