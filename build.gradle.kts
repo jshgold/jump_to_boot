@@ -6,7 +6,7 @@ plugins {
 
 group = "csh"
 version = "0.0.1-SNAPSHOT"
-description = "back"
+description = "sbb"
 
 java {
     toolchain {
