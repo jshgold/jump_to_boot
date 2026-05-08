@@ -1,9 +1,7 @@
-package csh.back;
+package csh.back.question;
 
-import csh.back.entity.Answer;
-import csh.back.entity.Question;
-import csh.back.repository.AnswerRepository;
-import csh.back.repository.QuestionRepository;
+import csh.back.answer.Answer;
+import csh.back.answer.AnswerRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +16,9 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @ActiveProfiles("test")
+@Transactional
 @SpringBootTest
-class PostRepositoryTest {
+class QuestionRepositoryTests {
     @Autowired
     private QuestionRepository questionRepository;
 
@@ -70,7 +69,6 @@ class PostRepositoryTest {
 
     @Test
     @DisplayName("수정")
-    @Transactional
     void t6() {
         Question question = questionRepository.findById(1).get();
         assertThat(question).isNotNull();
@@ -84,7 +82,6 @@ class PostRepositoryTest {
 
     @Test
     @DisplayName("삭제")
-    @Transactional
     void t7() {
         assertThat(questionRepository.count()).isEqualTo(2);
 
@@ -96,7 +93,6 @@ class PostRepositoryTest {
 
     @Test
     @DisplayName("답변 생성")
-    @Transactional
     void t8() {
         Question question = questionRepository.findById(2).get();
 
@@ -111,7 +107,6 @@ class PostRepositoryTest {
 
     @Test
     @DisplayName("답변 생성 by oneToMany")
-    @Transactional
     void t9() {
         Question question = questionRepository.findById(2).get();
 

@@ -1,6 +1,5 @@
-package csh.back.repository;
+package csh.back.answer;
 
-import csh.back.entity.Answer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface AnswerRepository extends JpaRepository<Answer, Integer> {

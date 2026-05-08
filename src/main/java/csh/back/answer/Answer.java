@@ -1,5 +1,6 @@
-package csh.back.entity;
+package csh.back.answer;
 
+import csh.back.question.Question;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
